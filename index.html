@@ -863,15 +863,7 @@
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"433099451d244238901d755d4d011b2d","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 <script>
 function trackWA() {
-  fetch('https://api.web3forms.com/submit', {
-    method: 'POST',
-    headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify({
-      access_key: '82fa11e9-11dc-46c4-947d-2195d4c94229',
-      subject: 'Click WhatsApp - ' + window.location.href,
-      message: 'Click WhatsApp desde: ' + window.location.href
-    })
-  }).catch(function(){});
+  (window.dataLayer=window.dataLayer||[]).push({event:'whatsapp_click',wa_location:window.location.href});
 }
 </script>
 </body>
